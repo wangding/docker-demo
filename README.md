@@ -1,3 +1,6 @@
-# docker-demo
+# 05-mysql
 
-从简单到复杂的一些 docker 示例。每个示例一个单独的分支。
+mysql docker，建库建表。
+
+- run.sh 拉取镜像，启动容器，访问容器
+- del.sh 停止容器，删除容器
