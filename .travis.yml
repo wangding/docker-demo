@@ -6,7 +6,6 @@ services:
   - docker
 
 after_script:
-  - npm run build
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t wdamtb/ci-app:latest .
   - docker push wdamtb/ci-app:latest

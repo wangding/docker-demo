@@ -1,0 +1,20 @@
+{
+  "name": "docker-demo",
+  "version": "1.0.0",
+  "description": "利用 travis-ci 自动构建镜像，发布镜像。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangding/docker-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangding/docker-demo/issues"
+  },
+  "homepage": "https://github.com/wangding/docker-demo#readme"
+}

@@ -1,6 +1,5 @@
 FROM node:alpine
 
-COPY . /ci-app
-WORKDIR /ci-app
+COPY ./index.js /ci-app/index.js
 
-ENTRYPOINT ["node", "index.js"]
+ENTRYPOINT ["node", "/ci-app/index.js"]
