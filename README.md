@@ -1,3 +1,3 @@
-# docker-demo
+# 13-wordpress
 
-从简单到复杂的一些 docker 示例。每个示例一个单独的分支。
+wordpress 仓库 + MySQL 仓库，搭建博客网站或企业网站。
