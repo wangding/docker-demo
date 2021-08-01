@@ -1,0 +1,18 @@
+kind: pipeline
+name: default
+
+steps:
+- name: build
+  image: docker:dind
+  volumes:
+  - name: dockersock
+    path: /var/run/docker.sock
+  commands:
+  - ./clean.sh
+  - docker build . -t abcweb-img:latest --rm=true
+  - docker run -d --name=abcweb abcweb-img:latest
+
+volumes:
+- name: dockersock
+  host:
+    path: /var/run/docker.sock
