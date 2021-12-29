@@ -1,0 +1,24 @@
+kind: pipeline
+name: default
+
+steps:
+- name: build gitbook
+  image: node:10.23.3-alpine3.11
+  commands:
+  - npm i -g gitbook-cli
+  - gitbook build
+
+- name: build docker image
+  image: docker:dind
+  volumes:
+  - name: dockersock
+    path: /var/run/docker.sock
+  commands:
+  - ./clean.sh
+  - docker build . -t ebook-img:latest --rm=true
+  - docker run -d -p 8080:80 --name=ebook ebook-img:latest
+
+volumes:
+- name: dockersock
+  host:
+    path: /var/run/docker.sock
